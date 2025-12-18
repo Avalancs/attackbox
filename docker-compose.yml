@@ -1,0 +1,16 @@
+services:
+  attackbox:
+    image: avala/attackbox
+    container_name: attackbox
+    build:
+      context: ./kali
+      dockerfile: Dockerfile
+    environment:
+      - "VNC_PW=KaliForWin1" # log in with kasm_user and this password
+    ports:
+      - "127.0.0.1:6901:6901" # access in a browser in https://localhost:6901 . You will need to ignore invalid ssl cert
+    cap_add:
+      - NET_ADMIN # allow networking for OpenVPN
+    volumes:
+      - "./home:/home/kasm-user"              # save home directory, if you want persistence (e.g.: browser settings)
+      - "./tryhackme.ovpn:/tryhackme.ovpn:ro" # mount the openvpn configuration file you downloaded from TryHackMe

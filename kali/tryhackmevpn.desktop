@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TryHackMe VPN
+Icon=network-connect
+Exec="/usr/local/bin/tryhackmevpn.sh" %f
+Comment=Start TryHackMe VPN
+Categories=Development;
+Terminal=true
+StartupNotify=true

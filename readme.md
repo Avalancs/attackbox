@@ -23,3 +23,10 @@ Possible improvements:
 * Double-click `TryHackMe VPN` icon on desktop. It starts a terminal window, while that is running you are connected to TryHackMe
 * In another terminal window, check if connection was successful with `ping 192.168.128.1` based on [this article](https://help.tryhackme.com/en/articles/6496058-troubleshooting-openvpn-on-linux-and-mac)
 * You should be good to go with the lessons requiring an attack box!
+
+# TryHackMe notes
+
+## day 2
+* Clone project with `git clone https://github.com/trustedsec/social-engineer-toolkit.git`
+* in the cloned folder run `sudo apt install set -y` to install dependencies
+* run with `sudo setoolkit`

@@ -19,7 +19,9 @@ COPY --chown=root --chmod=755 ./tryhackmevpn.sh /usr/local/bin/
 COPY --chown=1000 --chmod=755 ./tryhackmevpn.desktop /home/kasm-default-profile/Desktop
 
 # install openconnect
-RUN apt-get update && apt-get install -y openvpn iputils-ping xfce4-terminal && apt-get clean
+RUN apt-get update && apt-get install -y openvpn iputils-ping xfce4-terminal \
+    python3.13-venv dirb openssh-client tnftp dnsutils \
+    && apt-get clean
 
 # Generate Hungarian locale for accented characters to work
 RUN sed -i 's/# hu_HU.UTF-8 UTF-8/hu_HU.UTF-8 UTF-8/g' /etc/locale.gen && locale-gen
